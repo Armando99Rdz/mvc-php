@@ -11,22 +11,19 @@
 			
 		}
 
-		// cargar modelo
-		public function model($model){
-			// carga
+		public function model($model){ # carga e intancia el modelo
+			# carga el modelo
 			require_once '../app/models/' . $model . '.php';
-			// instanciar modelo
+			# instancia el modelo
 			return new $model();
 
 		}
 
-		// cargar vista
+		# cargar la vista y pasarle datos
 		public function view($view, $data = []){
-			// verificar si el archivo vista existe en la carpeta views/
-			if(file_exists('../app/views/' . $view . '.php')){
-				require_once '../app/views/' . $view . '.php';
+			if(file_exists('../app/views/' . $view . '.php')){ # verificar el archivo vista existe en views/
+				require_once '../app/views/' . $view . '.php'; #
 			}else{
-				// si el archivo de la vista no existe
 				die('La vista no existe');
 			}
 		}
