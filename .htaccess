@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+
+	# Evitar escribir la carpeta public/ en la url. Solo escribiriamos el 
+	# nombre de la carpeta de proyecto
+	RewriteEngine On
+	RewriteRule ^$ public/ [L]
+	RewriteRule (.*) public/$1 [L]
+
+</IfModule>

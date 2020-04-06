@@ -1,0 +1,16 @@
+# Redireccionar todo lo que no existe al index.php
+
+<IfModule mod_rewrite.c>
+#desactivar las multivistas
+Options -Multiviews 
+
+RewriteEngine On
+RewriteBase /mvc_app/public
+
+# Si el archivo existe que lo cargue
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+# Si ni existe, que reescriba la url para cargar el index.php
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+</IfModule>

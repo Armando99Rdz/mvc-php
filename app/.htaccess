@@ -1,0 +1,3 @@
+
+# Restringir el acceso al actual directorio (app/). Lo contrario seria +Indexes.
+Options -Indexes
