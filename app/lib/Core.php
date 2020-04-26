@@ -26,6 +26,7 @@
 				unset($url[0]);
 			}
 			// requerir el controlador actual
+			$this->controladorActual = ucwords($this->controladorActual);
 			require_once '../app/controllers/' . $this -> controladorActual . '.php';
 			$this -> controladorActual = new $this -> controladorActual;
 

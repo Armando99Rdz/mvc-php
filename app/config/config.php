@@ -16,7 +16,7 @@
 	define('RUTA_APP',dirname(dirname(__FILE__)));  # imprimiento la ruta hasta carpeta_proy/app
 
 	# Ruta url de la aplicacion como constante
-	define('RUTA_URL', 'http://localhost/mvc_app');
+	define('RUTA_URL', 'http://localhost/mvc-php');
 
 	# Nombre del sitio
 	define('NOMBRE_APP', 'MVC App');
